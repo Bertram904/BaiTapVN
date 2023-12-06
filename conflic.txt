@@ -1,0 +1,30 @@
+Khi bị conflic thì sẽ xử lý như thế nào ?
+
+Khi bị conflic trong Git là hai nhánh đang được merge có những thay đổi trùng lặp trong cùng một file.
+2 cách chính để giải quyết conflic trong Git:
+- Có thể mở file có xung đột và tự mình giải quyết nó. Git sẽ đánh dấu các thay đổi xung đột bằng các dấu hoa thị (*). 
+    Cần chọn một trong hai thay đổi và xóa thay đổi còn lại.   
+- Có thể sử dụng một công cụ giải quyết conflic tự động như git mergetool.
+Các bước giải quyết conflic thủ công:
+    + Mở file có xung đột trong trình soạn thảo văn bản.
+    + Tìm các thay đổi xung đột. Git sẽ đánh dấu các thay đổi xung đột bằng các dấu hoa thị (*).
+    + Chọn một trong hai thay đổi và xóa thay đổi còn lại.
+    + Lưu file và đóng trình soạn thảo văn bản.
+    + Chạy lệnh git add để thêm file đã được sửa chữa vào staging area.
+    + Chạy lệnh git commit để commit các thay đổi của bạn.
+
+Các bước giải quyết conflic dùng công cụ mergetool:
+    + Chạy lệnh git mergetool.
+    + Chọn công cụ giải quyết conflic mà bạn muốn sử dụng.
+    + Công cụ sẽ mở file có xung đột trong một trình soạn thảo văn bản hoặc trình soạn thảo mã.
+    + Sử dụng công cụ để chọn cách giải quyết xung đột.
+    + Lưu file và đóng trình soạn thảo văn bản.
+    + Chạy lệnh git add để thêm file đã được sửa chữa vào staging area.
+    + Chạy lệnh git commit để commit các thay đổi của bạn.
+
+Có cách nào để hạn chế conflic không ?
+- Tạo nhánh (Branch) cho từng tính năng hoặc sửa đổ
+- Thực hiện thường xuyên Pull
+- Giữ cho Commit nhỏ và tập trung
+- Sử dụng Git Hooks
+- Thực hiện Code Review
